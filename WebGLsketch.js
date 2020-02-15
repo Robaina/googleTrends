@@ -40,14 +40,14 @@ function initialize() {
 
 
   // Start a simple rotation animation
-  // let before = null;
-  // requestAnimationFrame(function animate(now) {
-  //   let c = earth.getPosition();
-  //   let elapsed = before? now - before: 0;
-  //   before = now;
-  //   earth.setCenter([c[0], c[1] - 0.05*(elapsed/30)]);
-  //   requestAnimationFrame(animate);
-  // });
+  let before = null;
+  requestAnimationFrame(function animate(now) {
+    let c = earth.getPosition();
+    let elapsed = before? now - before: 0;
+    before = now;
+    earth.setCenter([c[0], c[1] - 0.05*(elapsed/30)]);
+    requestAnimationFrame(animate);
+  });
 
 
 }
