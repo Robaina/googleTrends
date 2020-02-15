@@ -1,0 +1,35 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+#earth_div {
+  top: 15vh;
+  right: 0;
+  bottom: 0;
+  left: 0vw;
+  width: 100vw;
+  height: 85vh;
+  position: absolute !important;
+  margin:0;
+  padding: 0;
+}
+
+#title {
+  width: 100vw;
+  height: 10vh;
+  top: 5vh;
+  text-align: center;
+  /* margin-top: 5vh; */
+  position: absolute;
+  z-index: 2 !important;
+}
+#title > h1 {
+  color: white;
+  font-size: 4em;
+  font-family: sans-serif;
+  margin: 0;
+}

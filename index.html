@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Google search trends displayed in a World map build with WebGL Earth">
+    <meta name="keywords" content="Google, trends, world, web development">
+    <meta name="author" content="Semidán Robaina Estévez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google Trends</title>
+    <link rel="icon" type="image/png" href="earth.png">
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script src="countries.json"></script>
+    <script src="CountryTrends.json"></script>
+    <script src="WebGLsketch.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body onload="initialize()">
+
+    <!-- <div id="earth_div"></div> -->
+    <div id="title">
+      <h1>Google search trends</h1>
+    </div>
+    <div id="earth_div"></div>
+  </body>
+</html>
