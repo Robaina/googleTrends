@@ -14,7 +14,7 @@ function initialize() {
     'sky': true,
     'dragging': true,
     'tilting': true,
-    'zooming': true
+    'zooming': false
   }
   let earth = new WE.map('earth_div', options);
   // WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
@@ -32,8 +32,8 @@ function initialize() {
   //earth.setView([0, 0], 1);
 
   // Open default popups
-  for (country of defaultCountries) {
-    markers[country].openPopup();
+  if (window.innerWidth > 600) {
+    openDefaultPopups(markers, defaultCountries);
   }
   // console.log(earth.getCenter());
   // markers["DE"].closePopup();
@@ -50,6 +50,18 @@ function initialize() {
   });
 
 
+}
+
+function openDefaultPopups(markers, defaultCountries) {
+  for (country of defaultCountries) {
+    markers[country].openPopup();
+  }
+}
+
+function closeAllMarkers(markers) {
+  for (marker of markers) {
+    marker.closePopup();
+  }
 }
 
 function getCountryByCode(code) {
